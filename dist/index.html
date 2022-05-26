@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script
+      defer
+      src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+    <title>Document</title>
+    <style>
+      * {
+        font-family: "Poppins", sans-serif;
+      }
+      li {
+        margin-top: 15px;
+        font-weight: 500;
+        display: flex;
+        flex-direction: row;
+      }
+      .activeLi {
+        color: #ff014f;
+        width: 30000px;
+      }
+
+      i:hover {
+        color: #3c3e41;
+      }
+      i a {
+        margin-left: 5px;
+      }
+      li i {
+        height: 20px;
+        color: #878e99;
+        margin-right: 5px;
+        margin-bottom: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="">
+      <div class="flex flex-row">
+        <header
+          class="md:h-full shadow-4x1 fixed hidden md:block top-0 left-0 w-72 bg-main p-10 ma"
+        >
+          <div class="p-2 bg-white rounded-full w-fit">
+            <img class="rounded-full" src="img/logo-06.png" alt="" />
+          </div>
+          <div
+            x-data="{
+            activeTab:0
+          }"
+          >
+            <ul class="text-navbarLi mx-4 my-14">
+              <li
+                x-on:click="activeTab=0"
+                x-bind:class="{activeTab  ? '' : ''}"
+              >
+                <i class="fa-solid fa-house-user" aria-hidden="true"
+                  ><a href="#">HOME</a></i
+                >
+              </li>
+
+              <li x-on:click="activeTab=1" x-bind:class="{activeTab = 1}">
+                <i class="fa-solid fa-briefcase"><a href="#">FEATURES</a></i>
+              </li>
+
+              <li x-on:click="activeTab=2" x-bind:class="{activeTab = 2}">
+                <i class="fa-solid fa-arrow-trend-up"
+                  ><a href="#">PORTFOLIO</a></i
+                >
+              </li>
+
+              <li x-on:click="activeTab=3" x-bind:class="{activeTab = 3}">
+                <i class="fa-solid fa-people-group"><a href="#">RESUME</a></i>
+              </li>
+
+              <li x-on:click="activeTab=4" x-bind:class="{activeTab = 4}">
+                <i class="fa-solid fa-comment-dots"><a href="#">CONTACT</a></i>
+              </li>
+            </ul>
+            <span x-text="activeTab"></span>
+          </div>
+          <div></div>
+        </header>
+        <div class="h-screen w-full md:ml-60 bg-main">
+          <div class="flex flex-col items-center pt-24 md:h-screen">
+            <div
+              class="rounded-full relative bg-gradient-to-r from-red-600 to-purple-700 p-2"
+            >
+              <img
+                class="rounded-full h-80 gradient-border"
+                src="img/banner-06.png"
+                alt=""
+              />
+            </div>
+            <div class="mt-5">
+              <h1 class="text-4xl font-bold">Mostafa Niakan</h1>
+              <div class="text-2xl mt-5 flex flex-row justify-center">
+                <h2 class="">I am a</h2>
+                <h3 class="cd-headline clip">
+                  <span class="cd-words-wrapper text-btnColor">
+                    <b class="is-visible">pizza</b>
+                    <b>sushi</b>
+                    <b>steak</b>
+                  </span>
+                </h3>
+              </div>
+              <div class="mt-8 bg-btnHeader w-fit m-auto">
+                <a
+                  class="shadow-4x1 py-4 px-9 text-sm font-medium text-btnColor hover:text-white bg-gradient-to-r from-shadowColor to-white hover:from-btnColor hover:to-GradientBtn cursor-pointer rounded duration-700"
+                >
+                  <span>CONTACT ME</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/jquery-2.1.1.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
