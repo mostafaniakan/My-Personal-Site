@@ -42,7 +42,7 @@
       }
       li i {
         height: 20px;
-        color: #878e99;
+
         margin-right: 5px;
         margin-bottom: 5px;
       }
@@ -59,38 +59,53 @@
           </div>
           <div
             x-data="{
-            activeTab:0
+            activeTab:0,
+           
           }"
           >
             <ul class="text-navbarLi mx-4 my-14">
-              <li
-                x-on:click="activeTab=0"
-                x-bind:class="{activeTab  ? '' : ''}"
-              >
-                <i class="fa-solid fa-house-user" aria-hidden="true"
+              <li x-on:click="activeTab = 0 ">
+                <i
+                  :class="[activeTab == 0 ? 'text-rose-500' : 'text-navbarLi']"
+                  class="fa-solid fa-house-user"
+                  aria-hidden="true"
                   ><a href="#">HOME</a></i
                 >
               </li>
 
               <li x-on:click="activeTab=1" x-bind:class="{activeTab = 1}">
-                <i class="fa-solid fa-briefcase"><a href="#">FEATURES</a></i>
+                <i
+                  :class="[activeTab == 1 ? 'text-rose-500' : 'text-navbarLi']"
+                  class="fa-solid fa-briefcase"
+                  ><a href="#">FEATURES</a></i
+                >
               </li>
 
               <li x-on:click="activeTab=2" x-bind:class="{activeTab = 2}">
-                <i class="fa-solid fa-arrow-trend-up"
+                <i
+                  :class="[activeTab == 2 ? 'text-rose-500' : 'text-navbarLi']"
+                  class="fa-solid fa-arrow-trend-up"
                   ><a href="#">PORTFOLIO</a></i
                 >
               </li>
 
               <li x-on:click="activeTab=3" x-bind:class="{activeTab = 3}">
-                <i class="fa-solid fa-people-group"><a href="#">RESUME</a></i>
+                <i
+                  :class="[activeTab == 3 ? 'text-rose-500' : 'text-navbarLi']"
+                  class="fa-solid fa-people-group"
+                  ><a href="#">RESUME</a></i
+                >
               </li>
 
               <li x-on:click="activeTab=4" x-bind:class="{activeTab = 4}">
-                <i class="fa-solid fa-comment-dots"><a href="#">CONTACT</a></i>
+                <i
+                  :class="[activeTab == 4 ? 'text-rose-500' : 'text-navbarLi']"
+                  class="fa-solid fa-comment-dots"
+                  ><a href="#">CONTACT</a></i
+                >
               </li>
             </ul>
-            <span x-text="activeTab"></span>
+            
           </div>
           <div></div>
         </header>
