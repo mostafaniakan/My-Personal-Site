@@ -34,13 +34,13 @@
         width: 30000px;
       }
 
-      i:hover {
+      .navbar li i:hover {
         color: #3c3e41;
       }
-      i a {
+      .navbar li i a {
         margin-left: 5px;
       }
-      li i {
+      .navbar li i {
         height: 20px;
 
         margin-right: 5px;
@@ -48,7 +48,7 @@
       }
     </style>
   </head>
-  <body>
+  <body class="bg-main">
     <div class="">
       <div class="flex flex-row">
         <header
@@ -63,7 +63,7 @@
            
           }"
           >
-            <ul class="text-navbarLi mx-4 my-14">
+            <ul class="text-navbarLi mx-4 my-14 navbar">
               <li x-on:click="activeTab = 0 ">
                 <i
                   :class="[activeTab == 0 ? 'text-rose-500' : 'text-navbarLi']"
@@ -105,11 +105,10 @@
                 >
               </li>
             </ul>
-            
           </div>
           <div></div>
         </header>
-        <div class="h-screen w-full md:ml-60 bg-main">
+        <div class="h-screen w-full md:ml-292">
           <div class="flex flex-col items-center pt-24 md:h-screen">
             <div
               class="rounded-full relative bg-gradient-to-r from-red-600 to-purple-700 p-2"
@@ -138,6 +137,18 @@
                 >
                   <span>CONTACT ME</span>
                 </a>
+              </div>
+            </div>
+          </div>
+          <div class="mt-10 md:h-screen items-center flex flex-col border-t-4">
+            <div class="mt-5 w-full flex flex-col items-center">
+              <h2>My Resume</h2>
+              <div class="w-full ">
+                <ul class="flex flex-row w-full items-center py-3">
+                  <li class="bg-red-600 w-full">About Me</li>
+                  <li class="bg-red-300 w-full">professional Skills</li>
+                </ul>
+              </div>
               </div>
             </div>
           </div>

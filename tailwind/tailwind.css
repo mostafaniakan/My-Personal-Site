@@ -2,18 +2,3 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
-  @keyframes steam {
-    0% {
-      background-position: 0 0;
-      background: linear-gradient(to right, red, purple);
-    }
-    50% {
-      background-position: 400% 0;
-    }
-    100% {
-      background-position: 0 0;
-      background: linear-gradient(to right, red, purple);
-    }
-  }
-}
