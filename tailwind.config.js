@@ -9,6 +9,7 @@ module.exports = {
         GradientBtn: "#d11414",
         shadowColor: "#e2e8ec",
         navbarLi: "#878e99",
+        borderColor: "#d9dee2",
       },
       boxShadow: {
         "4x1": "5px 5px 15px #D1D9E6, -5px -5px 15px #ffffff;",
