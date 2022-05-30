@@ -492,10 +492,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin: auto;
 }
 
-.m-2 {
-  margin: 0.5rem;
-}
-
 .mx-4 {
   margin-left: 1rem;
   margin-right: 1rem;
@@ -504,16 +500,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .my-14 {
   margin-top: 3.5rem;
   margin-bottom: 3.5rem;
-}
-
-.my-10 {
-  margin-top: 2.5rem;
-  margin-bottom: 2.5rem;
-}
-
-.my-5 {
-  margin-top: 1.25rem;
-  margin-bottom: 1.25rem;
 }
 
 .my-2 {
@@ -553,28 +539,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 0.75rem;
 }
 
+.mt-6 {
+  margin-top: 1.5rem;
+}
+
 .mb-5 {
   margin-bottom: 1.25rem;
 }
 
 .mb-1 {
   margin-bottom: 0.25rem;
-}
-
-.mt-4 {
-  margin-top: 1rem;
-}
-
-.mt-1 {
-  margin-top: 0.25rem;
-}
-
-.mb-10 {
-  margin-bottom: 2.5rem;
-}
-
-.mt-6 {
-  margin-top: 1.5rem;
 }
 
 .flex {
@@ -613,12 +587,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 0.25rem;
 }
 
-.h-full {
-  height: 100%;
-}
-
 .h-3 {
   height: 0.75rem;
+}
+
+.h-full {
+  height: 100%;
 }
 
 .w-72 {
@@ -711,11 +685,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-bottom-width: 2px;
 }
 
-.border-borderColor {
-  --tw-border-opacity: 1;
-  border-color: rgb(217 222 226 / var(--tw-border-opacity));
-}
-
 .bg-main {
   --tw-bg-opacity: 1;
   background-color: rgb(232 237 240 / var(--tw-bg-opacity));
@@ -726,9 +695,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-borderColor {
-  --tw-bg-opacity: 1;
-  background-color: rgb(217 222 226 / var(--tw-bg-opacity));
+.bg-btnHeader {
+  background-color: linear-gradient(145deg, #e2e8ec, #ffffff);
 }
 
 .bg-btnColor {
@@ -739,11 +707,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-gray-300 {
   --tw-bg-opacity: 1;
   background-color: rgb(209 213 219 / var(--tw-bg-opacity));
-}
-
-.bg-blue-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
 }
 
 .bg-gradient-to-r {
@@ -834,10 +797,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 1.25rem;
 }
 
-.pb-1 {
-  padding-bottom: 0.25rem;
-}
-
 .pb-10 {
   padding-bottom: 2.5rem;
 }
@@ -860,16 +819,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
-}
-
-.text-base {
-  font-size: 1rem;
-  line-height: 1.5rem;
-}
-
-.text-xs {
-  font-size: 0.75rem;
-  line-height: 1rem;
 }
 
 .font-bold {
@@ -901,16 +850,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-btnColor {
   --tw-text-opacity: 1;
   color: rgb(255 1 79 / var(--tw-text-opacity));
-}
-
-.text-blue-700 {
-  --tw-text-opacity: 1;
-  color: rgb(29 78 216 / var(--tw-text-opacity));
-}
-
-.text-Progress {
-  --tw-text-opacity: 1;
-  color: rgb(30 33 37 / var(--tw-text-opacity));
 }
 
 .text-black {
@@ -975,11 +914,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   .dark\:bg-gray-700 {
     --tw-bg-opacity: 1;
     background-color: rgb(55 65 81 / var(--tw-bg-opacity));
-  }
-
-  .dark\:text-white {
-    --tw-text-opacity: 1;
-    color: rgb(255 255 255 / var(--tw-text-opacity));
   }
 }
 
