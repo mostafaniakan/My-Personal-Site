@@ -51,7 +51,7 @@
       }
     </style>
   </head>
-  <body class="bg-main" x-data="{ Show:0,activeTab:0 }">
+  <body class="bg-main" x-data="{ Show:0,activeTab:0,Tabsactive:0 }">
     <div class="">
       <div class="flex flex-row" >
         <header
@@ -108,7 +108,7 @@
               </li>
             </ul>
           </div>
-          <div ><h2 x-text="Show" ></h2></div>
+          <div ></div>
         </header>
         <div   class="h-screen w-full md:ml-292"   >
           <div class="flex flex-col items-center pt-24 md:h-screen " id="home">
@@ -143,18 +143,20 @@
               </div>
             </div>
           </div>
-          <div class="mt-10 md:h-screen items-center flex flex-col border-t-4" id="resume">
+        <div class="" id="resume">
+          <div class="mt-10  items-center flex flex-col border-t-4" >
             <div class="mt-5 w-full flex flex-col items-center">
               <h2 class="text-4xl font-bold">My Resume</h2>
               <div class="w-full ">
                 <ul class="flex flex-row w-full items-center  justify-evenly">
-                  <li class="hover:shadow-4x1 w-56  py-6 lg:px-9 px-5 font-bold text-sm   text-navbarLi hover:text-btnColor bg-gradient-to-r from-shadowColor to-white   cursor-pointer rounded duration-600 ease-in-out">About Me</li>
-                  <li class="hover:shadow-4x1 w-56  py-6 lg:px-9 px-5 font-bold text-sm   text-navbarLi hover:text-btnColor bg-gradient-to-r from-shadowColor to-white   cursor-pointer rounded duration-600 ease-in-out">professional Skills</li>
+                  <li x-on:click="Tabsactive =0"  class="hover:shadow-4x1 w-56  py-6 lg:px-9 px-5 font-bold text-sm   text-black hover:text-btnColor bg-gradient-to-r from-shadowColor to-white   cursor-pointer rounded duration-600 ease-in-out">About Me</li>
+                  <li x-on:click="Tabsactive =1" class="hover:shadow-4x1 w-56  py-6 lg:px-9 px-5 font-bold text-sm   text-black hover:text-btnColor bg-gradient-to-r from-shadowColor to-white   cursor-pointer rounded duration-600 ease-in-out">professional Skills</li>
                 </ul>
+               
               </div>
               
               </div>
-              <div class="grid  lg:grid-cols-2 grid-cols-1 gap-4 w-full mt-10"   >
+              <div class="grid  lg:grid-cols-2 grid-cols-1 gap-4 w-full mt-10"  x-show="Tabsactive === 0" >
                 <div class="    border-l-4 border-borderColor ">
                   
                 <div class=" relative w-full p-8 ">
@@ -174,6 +176,10 @@
                         <i class="fa-solid fa-graduation-cap text-4xl mb-2"></i><h3  class="text-3xl font-semibold  ">High school</h3>
                       </div>
                      <div class="mt-3 flex md:flex-row flex-col justify-between ">
+                      <div>
+                        <p class="mb-3 font-extrabold" >High School Name :</p>
+                        <P>Amir Kabir</P>
+                      </div>
                        <div>
                         <p class="mb-3 font-extrabold">
                           Field of study : 
@@ -181,10 +187,7 @@
                          <P>COMPUTER
                         </P>
                        </div>
-                      <div>
-                        <p class="mb-3 font-extrabold" >High School Name :</p>
-                        <P>Amir Kabir</P>
-                      </div>
+                      
                      </div>
                       
                     </div>
@@ -230,6 +233,10 @@
                           <i class="fa-solid fa-building-columns text-4xl mb-2"> </i><h3  class="text-3xl font-semibold   ">University</h3>
                         </div>
                        <div class="mt-3 flex md:flex-row flex-col justify-between">
+                        <div>
+                          <p class="mb-3 font-extrabold">University Name :</p>
+                          <P>Semnan Technical</P>
+                        </div>
                        <div class="mb-3">
                         <p class="mb-3 font-extrabold ">
                           Field of study : 
@@ -239,10 +246,7 @@
                         </P>
                         
                        </div>
-                       <div>
-                         <p class="mb-3 font-extrabold">University Name :</p>
-                         <P>Semnan Technical</P>
-                       </div>
+                     
                        </div>
                         
                       </div>
@@ -264,7 +268,132 @@
                   </div>
                 </div>
               </div>
+
+              <div class="grid  lg:grid-cols-2 grid-cols-1 gap-4 w-full my-2 pb-10 "  x-show="Tabsactive === 1" >
+
+
+                <div class="p-3 mt-6">
+                  <div >
+                    <span class="text-btnColor text-sm">Features</span>
+                    <h2 class="text-3xl font-bold">Development Skill</h2>
+                  </div>
+                  <div class="h-80 mt-5  border-borderColor">
+                    <div class="mb-5 text-Progress font-medium">
+                      <div class="flex justify-between mb-1 text-sm">
+                        <span class="  mb-1">HTML</span>
+                        <span class="  mt-2">85%</span>
+                      </div>
+                      <div class="w-full bg-gray-300 rounded-full h-3 dark:bg-gray-700 p-0.5  ">
+                        <div class="bg-gradient-to-r  from-white to-GradientBtn h-full rounded-full" style="width: 85%"></div>
+                      </div>
+                     </div>
+                     
+                     <div class="mb-5 text-Progress font-medium">
+                      <div class="flex justify-between mb-1 text-sm">
+                        <span class="  mb-1">CSS</span>
+                        <span class="  mt-2">85%</span>
+                      </div>
+                      <div class="w-full bg-gray-300 rounded-full h-3 dark:bg-gray-700 p-0.5  ">
+                        <div class="bg-gradient-to-r  from-white to-GradientBtn h-full rounded-full" style="width: 85%"></div>
+                      </div>
+                     </div>
+
+
+
+                    <div class="mb-5 text-Progress font-medium">
+                      <div class="flex justify-between mb-1 text-sm">
+                        <span class="  mb-1">Tailwind</span>
+                        <span class="  mt-2">85%</span>
+                      </div>
+                      <div class="w-full bg-gray-300 rounded-full h-3 dark:bg-gray-700 p-0.5  ">
+                        <div class="bg-gradient-to-r  from-white to-GradientBtn h-full rounded-full" style="width: 85%"></div>
+                      </div>
+                     </div>
+
+
+
+
+                     <div class="mb-5 text-Progress font-medium">
+                      <div class="flex justify-between mb-1 text-sm">
+                        <span class="  mb-1">JavaScript Es6</span>
+                        <span class="  mt-2">60%</span>
+                      </div>
+                      <div class="w-full bg-gray-300 rounded-full h-3 dark:bg-gray-700 p-0.5  ">
+                        <div class="bg-gradient-to-r  from-white to-GradientBtn h-full rounded-full" style="width: 60%"></div>
+                      </div>
+                     </div>
+
+                     <div class="mb-5 text-Progress font-medium">
+                      <div class="flex justify-between mb-1 text-sm">
+                        <span class="  mb-1">Alpine.js</span>
+                        <span class="  mt-2">70%</span>
+                      </div>
+                      <div class="w-full bg-gray-300 rounded-full h-3 dark:bg-gray-700 p-0.5  ">
+                        <div class="bg-gradient-to-r  from-white to-GradientBtn h-full rounded-full" style="width: 70%"></div>
+                      </div>
+                     </div>
+                     <div class="mb-5 text-Progress font-medium">
+                      <div class="flex justify-between mb-1 text-sm">
+                        <span class="  mb-1">React.js </span>
+                        <span class="  mt-2">30%</span>
+                      </div>
+                      <div class="w-full bg-gray-300 rounded-full h-3 dark:bg-gray-700 p-0.5  ">
+                        <div class="bg-gradient-to-r  from-white to-GradientBtn h-full rounded-full" style="width: 30%"></div>
+                      </div>
+                     </div>
+                  </div>
+                </div>
+
+
+                <div class="p-3 mt-6">
+                  <div>
+                    <span class="text-btnColor text-sm">Features</span>
+                    <h2 class="text-3xl font-bold">Design Skill</h2>
+                  </div>
+                  <div class="h-80 mt-5  border-borderColor">
+                    <div class="mb-5 text-Progress font-medium">
+                      <div class="flex justify-between mb-1 text-sm">
+                        <span class="  mb-1">PHOTOSHOT</span>
+                        <span class="  mt-2">30%</span>
+                      </div>
+                      <div class="w-full bg-gray-300 rounded-full h-3 dark:bg-gray-700 p-0.5  ">
+                        <div class="bg-gradient-to-r  from-white to-GradientBtn h-full rounded-full" style="width: 30%"></div>
+                      </div>
+                     </div>
+                     <div class="mb-5 text-Progress font-medium">
+                      <div class="flex justify-between mb-1 text-sm">
+                        <span class="  mb-1">ADOBE XD</span>
+                        <span class="  mt-2">25%</span>
+                      </div>
+                      <div class="w-full bg-gray-300 rounded-full h-3 dark:bg-gray-700 p-0.5  ">
+                        <div class="bg-gradient-to-r  from-white to-GradientBtn h-full rounded-full" style="width: 50%"></div>
+                      </div>
+                     </div>
+                     <div class="mb-5 text-Progress font-medium">
+                      <div class="flex justify-between mb-1 text-sm">
+                        <span class="  mb-1">DESIGN </span>
+                        <span class="  mt-2">5%</span>
+                      </div>
+                      <div class="w-full bg-gray-300 rounded-full h-3 dark:bg-gray-700 p-0.5  ">
+                        <div class="bg-gradient-to-r  from-white to-GradientBtn h-full rounded-full" style="width: 5%"></div>
+                      </div>
+                     </div>
+                  </div>
+                </div>
+
             </div>
+
+            
+              
+              
+              
+            </div>
+
+            
+
+
+           
+        </div>
           </div>
         </div>
       </div>
