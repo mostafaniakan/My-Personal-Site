@@ -659,26 +659,26 @@ z-index: 99;
 
 
 
-    <div class="w-screen h-full lg:h-screen flex justify-center items-center fixed z-20 bg-main  lg:p-32"
+    <div class="lg:w-screen  w-full h-full lg:h-screen flex justify-center items-center fixed z-20 bg-main  lg:p-32"
     :class="[moda ?  'block' : 'hidden']"
     >
       <div class=" rounded-lg  bg-gradient-to-r  shadow-4x1   from-shadowColor to-white">
-  <div class="w-full p-2 flex justify-end h-10">
+  <div class="w-full p-2 flex justify-end lg:h-10">
     <div x-on:click="moda = !moda" class="bg-slate-200   w-10 h-10 text-center p-1 shadow-4x1 cursor-pointer text-btnColor transition ease-in-out delay-75 hover:bg-btnColor hover:text-white   rounded-full">
       <i class="fa-solid fa-xmark text-2xl "></i>
     </div>
   </div>
-  <div class="flex flex-col lg:flex-row p-5 mt-6 ">
-    <div class="bg-red-600 overflow-hidden rounded-lg  w-full  mb-8">
+  <div class="flex flex-col lg:flex-row p-5 mt-3 lg:mt-6 ">
+    <div class="bg-red-600 overflow-hidden rounded-lg  w-full h-44 lg:h-full  mb-8">
   <img src="img/portfolio-04.jpg" alt="" class=" w-full h-full">
     </div>
-    <div class=" px-16 w-full  font-medium">
+    <div class=" lg:px-16 w-full  font-medium">
   <div class=" mb-6">
     <span >Featured - Design</span>
     <h2 class="lg:text-3xl text-xs mb-2 lg:mb-6 font-bold text-black mt-5">App Design Development.</h2>
-    <p class="mb-8 text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    <p class="mb-8 text-xs lg:text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit.
        Cupiditate distinctio assumenda explicabo veniam temporibus eligendi.</p>
-       <p class="  text-lg">Consectetur adipisicing elit. Cupiditate distinctio assumenda. dolorum alias suscipit 
+       <p class=" text-xs lg:text-lg">Consectetur adipisicing elit. Cupiditate distinctio assumenda. dolorum alias suscipit 
          rerum maiores aliquam earum odit, 
          nihil culpa quas iusto hic minus!</p>
   </div>
