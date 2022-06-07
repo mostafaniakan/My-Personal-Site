@@ -685,6 +685,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-bottom-width: 2px;
 }
 
+.border-borderColor {
+  --tw-border-opacity: 1;
+  border-color: rgb(217 222 226 / var(--tw-border-opacity));
+}
+
 .bg-main {
   --tw-bg-opacity: 1;
   background-color: rgb(232 237 240 / var(--tw-bg-opacity));
@@ -695,8 +700,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-btnHeader {
-  background-color: linear-gradient(145deg, #e2e8ec, #ffffff);
+.bg-borderColor {
+  --tw-bg-opacity: 1;
+  background-color: rgb(217 222 226 / var(--tw-bg-opacity));
 }
 
 .bg-btnColor {
@@ -855,6 +861,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-black {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.text-Progress {
+  --tw-text-opacity: 1;
+  color: rgb(30 33 37 / var(--tw-text-opacity));
 }
 
 .shadow-4x1 {
