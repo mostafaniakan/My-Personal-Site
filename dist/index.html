@@ -107,7 +107,7 @@ z-index: 99;
     </style>
   </head>
   <body class="bg-main" x-data="{ Show:0,activeTab:0,Tabsactive:0 ,
- moda:false,
+ moda:false,handleScroll:true,
   }"
     x-init="activeTab()"
     @scroll.window="activeTab()"
@@ -179,7 +179,7 @@ z-index: 99;
                 >
               </li>
             </ul>
-            
+            <div x-text="handleScroll"></div>
           </div>
           <div  class=" px-4">
 <h2 class="font-bold mb-3">FIND WITH ME</h2>
@@ -435,7 +435,7 @@ z-index: 99;
                 </div>
 
 
-                <div class="p-3 mt-6">
+                <div class="p-3 mt-6"  >
                   <div>
                     <span class="text-btnColor text-sm">Features</span>
                     <h2 class="text-3xl font-bold">Design Skill</h2>
@@ -486,7 +486,7 @@ z-index: 99;
         </div>
         <div class=" items-center flex flex-col border-t-4 p-8" id="PORTFOLIO">
         
-<div class="mt-5 w-full flex flex-col items-center">
+<div class="mt-5 w-full flex flex-col items-center"  @scroll.window.throttle="handleScroll =false">
   <span class="text-btnColor">VISIT MY PORTFOLIO AND KEEP YOUR FEEDBACK</span>
   <h2 class="text-4xl font-bold">My Portfolio</h2>
 </div>
@@ -596,7 +596,7 @@ z-index: 99;
 </div>
 <div></div>
   </div>
-  <div class=" bg-gradient-to-r p-8 mr-5 from-slate-300 to-shadowColor shadow-4x1 rounded-lg">
+  <div class=" bg-gradient-to-r p-8 lg:mr-5 from-slate-300 to-shadowColor shadow-4x1 rounded-lg">
    <form>
     <div class="flex md:flex-row flex-col justify-between ">
       <div class="">
