@@ -2,10 +2,13 @@ module.exports = {
   content: ["*/*.html"],
   theme: {
     extend: {
+      fontSize: {
+        0.5: "10px",
+      },
       colors: {
         main: "#E8EDF0",
 
-        texttop:"#3C3E41",
+        texttop: "#3C3E41",
         btnColor: "#ff014f",
         GradientBtn: "#d11414",
         shadowColor: "#e2e8ec",
